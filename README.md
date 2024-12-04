@@ -1,8 +1,38 @@
-# React + Vite
+# Yearly Temperature Anomaly Visualization with THREE JS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Overview
 
-Currently, two official plugins are available:
+This project visualizes the Yearly Temperature Anomaly Distribution on a 3D globe to raise awareness of global warming. It uses React for the UI, `three.js` for 3D rendering.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features so far!
+
+- Render a 3D interactive globe using Three.js.
+- Basic lighting setup for realistic rendering.
+- Cam controls.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/fieraoh/ThreeGlobeProj
+cd ThreeGlobeProj
+```
+
+2. Install deps:
+
+```bash
+npm install
+```
+
+3. Run:
+
+```bash
+npm run dev
+```
