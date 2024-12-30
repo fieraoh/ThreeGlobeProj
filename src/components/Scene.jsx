@@ -15,11 +15,11 @@ const Scene = ({ yearData, viewMode }) => {
 
 	return (
 		<>
-			{/* This group will hold the entire globe object */}
+			{/* The Globe */}
 			<primitive object={globeRef.current} />
 			<GlobeComponent globeRef={globeRef} yearData={yearData} viewMode={viewMode} />
 
-			{/* Lights */}
+			{/* The Lights */}
 			<ambientLight color={0xcccccc} intensity={1.3} />
 			<directionalLight color={0xffffff} intensity={1.2} position={[100, 200, 100]} />
 		</>

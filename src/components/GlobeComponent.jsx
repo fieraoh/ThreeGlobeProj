@@ -2,18 +2,16 @@
 import { useEffect } from 'react'
 import ThreeGlobe from 'three-globe'
 
-// d3-scale for color
 import { scaleSequential } from 'd3-scale'
 import { interpolateTurbo } from 'd3-scale-chromatic'
 
-// Adjust domain to match typical anomalies in your dataset
 const colorScale = scaleSequential(interpolateTurbo).domain([-8, 8])
 
 const GlobeComponent = ({ globeRef, yearData, viewMode }) => {
 	useEffect(() => {
 		if (!globeRef.current) return
 
-		// Create globe if none present yet
+		// Create globe if it doesn't exist
 		if (!globeRef.current.__globe) {
 			const globe = new ThreeGlobe()
 				.globeImageUrl('//unpkg.com/three-globe/example/img/earth-blue-marble.jpg')
@@ -41,7 +39,7 @@ const GlobeComponent = ({ globeRef, yearData, viewMode }) => {
 				.pointRadius(0.6)
 				.pointColor((d) => colorScale(d.temperature))
 
-			// Clear any previous hex data
+			// Cleanup
 			globeInstance.hexBinPointsData([])
 		} else {
 			// Hex bins
@@ -55,7 +53,7 @@ const GlobeComponent = ({ globeRef, yearData, viewMode }) => {
 				.hexSideColor(() => 'rgba(255, 255, 255, 0.5)')
 				.hexTransitionDuration(1000)
 
-			// Clear any previous points data
+			// Cleanup
 			globeInstance.pointsData([])
 		}
 	}, [globeRef, yearData, viewMode])

@@ -11,10 +11,10 @@ const ColorLegend = () => {
 
 	return (
 		<div className="flex items-center space-x-4 p-4">
-			{/* Minimum label */}
-			<span className="font-bold text-sm">-8</span>
+			{/* Min label */}
+			<span className="font-bold text-sm">-8 °C</span>
 
-			{/* The discrete color boxes */}
+			{/* Color Squares */}
 			<div className="flex space-x-0.5">
 				{stepValues.map((val, idx) => {
 					const color = colorScale(val)
@@ -22,8 +22,8 @@ const ColorLegend = () => {
 				})}
 			</div>
 
-			{/* Maximum label */}
-			<span className="font-bold text-sm">+8</span>
+			{/* Max label */}
+			<span className="font-bold text-sm">+8 °C</span>
 		</div>
 	)
 }

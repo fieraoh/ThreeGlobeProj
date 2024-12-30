@@ -17,7 +17,7 @@ const YearSlider = ({ minYear, maxYear, selectedYear, onYearChange }) => {
 				max={maxYear}
 				value={selectedYear}
 				onChange={handleChange}
-				className="w-64 accent-blue-500"
+				className="w-64 accent-indigo-500"
 			/>
 			<span className="text-xl font-semibold">{selectedYear}</span>
 		</div>
