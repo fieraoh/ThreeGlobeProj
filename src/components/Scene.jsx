@@ -21,7 +21,7 @@ const Scene = ({ yearData, viewMode }) => {
 
 			{/* The Lights */}
 			<ambientLight color={0xcccccc} intensity={1.3} />
-			<directionalLight color={0xffffff} intensity={1.2} position={[100, 200, 100]} />
+			<directionalLight color={0xffffff} intensity={3} position={[0, 1, 0]} />
 		</>
 	)
 }
